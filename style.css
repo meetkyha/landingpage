@@ -19,7 +19,6 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-family: Domine;
   font-size: 24px;
   font-weight: 400;
@@ -106,40 +105,49 @@ body {
 }
 
 /* Sign-up Form in Hero */
-.signup-form {
+.signup-wrapper {
+  width: 100%;
   margin: 1em auto;
-  max-width: 700px;
-  width: 344px;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  max-width: 345px;
+}
+
+.signup-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .signup-form input {
   width: 100%;
   margin-bottom: 0.5em;
   padding: 16px;
-  border: none;
-  border-radius: 5px;
   font-size: 16px;
-  background: var(--form-bg);
+  border-radius: 5px;
+  border: none;
 }
 
 .signup-form button {
-  width: auto;
-  margin-top: 0.25em;
   padding: 0.75em 1.5em;
-  background: var(--cta-bg);
-  color: var(--text-content-brand, #275B50);
+  font-size: 16px;
   border: none;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  background: var(--cta-bg);
+  color: var(--green);
   font-weight: 600;
-  line-height: 22px;
   text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
-  align-self: center;
+}
+
+/* Mobile padding around the container */
+@media (max-width: 767px) {
+  .signup-wrapper {
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
 }
 
 .signup-form button:hover {
@@ -171,6 +179,7 @@ body {
 .why h2 {
   color: #2C2C29;
   margin: 0;
+  text-align: center;
 }
 
 .features {
@@ -231,7 +240,7 @@ body {
 }
 
 .testimonial-header h2 {
-  margin: 0;
+  margin: 0 16px 0 0;
   color: var(--tan);
 }
 
@@ -295,6 +304,10 @@ blockquote {
   width: 100%;
   max-width: 468px;
   margin: 0 0 24px 0;
+}
+
+.about h2{
+  text-align: center;
 }
 
 .about-text {
