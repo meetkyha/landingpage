@@ -154,6 +154,20 @@ body {
   background: #BDE6AA;
 }
 
+.signup-form button:active,
+.cta .signup-form button:active {
+  background-color: #BDE6AA;
+  transform: scale(0.98);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.signup-form input:focus,
+.cta .signup-form input:focus {
+  outline: none;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 3px rgba(201, 245, 181, 0.4);
+}
+
 /* Phone Section */
 .phone-section {
   background: var(--green);
