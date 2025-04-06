@@ -21,6 +21,9 @@
           <input type="email" placeholder="Email address" />
           <button type="submit">Get early app access</button>
         </form>
+        <div class="thank-you" style="display: none; color: #F0E8D6;">
+          <p>Thanks for joining the waitlist — you’ll be the first to get early access when we launch.</p>
+        </div>
       </div>
     </div>
   </header>
@@ -103,6 +106,9 @@
       <input type="email" placeholder="Email address" />
       <button type="submit">JOIN THE WAITLIST</button>
     </form>
+    <div class="thank-you" style="display: none;">
+      <p>Thanks for joining the waitlist — you’ll be the first to get early access when we launch.</p>
+    </div>
     </div>
   </section>
 
@@ -154,6 +160,20 @@
 });
   </script>
 
+<script>
+  document.querySelectorAll('.signup-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+      const wrapper = form.closest('.signup-wrapper');
+      const thankYou = wrapper.querySelector('.thank-you');
+
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+
+      // OPTIONAL: You can send data to your backend here via fetch()
+    });
+  });
+</script>
   
 </body>
 </html>
